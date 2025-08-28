@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice – Chronomètre interactif</title>
+    <script src="assets/script.js" defer></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Yet Another Chronometre</h1>
+    <div id="chronometre">
+        <div class="digit-group">
+            <span id="hrs-tens" class="digit">0</span>
+            <span id="hrs-ones" class="digit">0</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="digit-group">
+            <span id="min-tens" class="digit">0</span>
+            <span id="min-ones" class="digit">0</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="digit-group">
+            <span id="sec-tens" class="digit">0</span>
+            <span id="sec-ones" class="digit">0</span>
+        </div>
+                <span class="separator">:</span>
+        <div class="digit-group">
+            <span id="mil-tens" class="digit">0</span>
+            <span id="mil-ones" class="digit">0</span>
+        </div>
+    </div>
+    <div id="controls">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+        <button id="lap">Lap</button>
+    </div>
+</body>
+</html>

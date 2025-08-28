@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(75, 75, 75);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#chronometre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.digit-group {
+    display: flex;
+}
+
+.digit {
+    position: relative; /* Nécessaire pour la ligne de séparation */
+    background-color: #000000;
+    color: #f0f0f0;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 3px;
+    width: 40px;
+    text-align: center;
+}
+
+/* Ligne de séparation au milieu de chaque chiffre */
+.digit::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.separator {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    padding: 0 5px;
+    transform: translateY(-3px); /* Ajustement vertical */
+}
+
+#controls {
+    text-align: center;
+}
+
+
+#start, #pause, #reset, #lap {
+    position: relative;
+    overflow: hidden;
+    padding: 6px 8px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    color: rgb(104, 104, 104);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.856);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 5px 1px rgba(0, 0, 0, 0.377);
+    font-size: 16px;
+}
+
+/* Effet hover - changement de couleur et ombre */
+#start:hover, #pause:hover, #reset:hover, #lap:hover {
+    box-shadow: 0 6px 10px 2px rgb(0, 0, 0);
+    transform: translateY(-0.20em);
+    transition: 0.1s ease;
+}
+
+/* Effet active - bouton enfoncé */
+#start:active, #pause:active, #reset:active, #lap:active {
+    transform: translateY(0);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.377);
+    transition: 0.01s ease;
+}
+
+/* Boutons désactivés */
+#start:disabled, #pause:disabled, #reset:disabled, #lap:disabled {
+    opacity: 0.5;
+    background-color: rgba(200, 200, 200, 0.6);
+    box-shadow: 0 0 1px 1px rgb(0, 0, 0);
+    transition: 0.1s ease;
+}
+
+#start:disabled:hover, #pause:disabled:hover, #reset:disabled:hover, #lap:disabled:hover {
+    transform: none;
+}
+
+#lap-times {
+    list-style: none; /* Removes the default bullet points */
+    padding: 10px 10px; /* Inner spacing */
+    margin: 30px auto 0; /* Centers the block horizontally */
+    background-color: white;
+    color: #333; /* Dark text color */
+    border-radius: 8px;
+    box-shadow: 5px 5px 6px rgb(0, 0, 0);
+    max-width: 150px; /* Sets a maximum width */
+    text-align: center; /* Centers the text inside */
+}
+
+#lap-times li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee; /* Separator line */
+}
+
+#lap-times li:last-child {
+    border-bottom: none; /* Removes the line from the last item */
+}
