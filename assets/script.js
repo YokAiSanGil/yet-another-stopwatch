@@ -36,7 +36,7 @@ function start() {
     if (!isRunning) {
         startTime = Date.now();
         isRunning = true;
-        timer = setInterval(update, 100);
+        timer = setInterval(update, 0.1);
 
         startButton.disabled = true;
         pauseButton.disabled = false;
